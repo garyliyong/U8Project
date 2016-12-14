@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ax213="http://core.mscp.webservice.sph.com/xsd" xmlns:ax212="http://req.mscp.webservice.sph.com/xsd" xmlns:ax223="http://vo.smc.mscp.sph.com/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.sph.webservice/" xmlns:ax215="http://vo.mscp.webservice.sph.com/xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns="http://www.sph.webservice/xsd" xmlns:ax218="http://resp.mscp.webservice.sph.com/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.sph.webservice/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>SupplyService</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema xmlns:ax217="http://req.mscp.webservice.sph.com/xsd" xmlns:ax222="http://core.mscp.webservice.sph.com/xsd" xmlns:ax220="http://resp.mscp.webservice.sph.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.sph.webservice/xsd">
+      <xs:import namespace="http://req.mscp.webservice.sph.com/xsd" />
+      <xs:import namespace="http://resp.mscp.webservice.sph.com/xsd" />
+      <xs:import namespace="http://core.mscp.webservice.sph.com/xsd" />
+      <xs:element name="uploadItemInvAdjustOrder">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="itemInvAdjustOrderReq" nillable="true" type="ax217:ItemInvAdjustOrderReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="uploadItemInvAdjustOrderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax220:ItemInvAdjustOrderUploadReturn" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="uploadInvoice">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="uploadInvoiceReq" nillable="true" type="ax217:UploadInvoiceReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="uploadInvoiceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax220:SupplyUploadInvoiceReturn" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="uploadDeliveryOrder">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="uploadDeliveryOrderReq" nillable="true" type="ax217:UploadDeliveryOrderReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="uploadDeliveryOrderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax220:SupplyUploadDeliveryOrderReturn" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="downloadSettle">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="baseWebServiceReq" nillable="true" type="ax222:BaseWebServiceReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="downloadSettleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax220:SettleDownloadReturn" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="downloadOrders4Dely">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="baseWebServiceReq" nillable="true" type="ax222:BaseWebServiceReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="downloadOrders4DelyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax220:SupplyOrderReturn" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="downloadItemInventory">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="baseWebServiceReq" nillable="true" type="ax222:BaseWebServiceReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="downloadItemInventoryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax220:ItemInventoryDownloadReturn" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="downloadItemInvAdjustApp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="baseWebServiceReq" nillable="true" type="ax222:BaseWebServiceReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="downloadItemInvAdjustAppResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax220:ItemInvAdjustAppDownloadReturn" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="downloadDeliveryOrderConfirm">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="baseWebServiceReq" nillable="true" type="ax222:BaseWebServiceReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="downloadDeliveryOrderConfirmResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax220:DeliveryOrderConfirmDownloadReturn" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:ax221="http://vo.mscp.webservice.sph.com/xsd" xmlns:ax219="http://core.mscp.webservice.sph.com/xsd" xmlns:ax224="http://vo.smc.mscp.sph.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://resp.mscp.webservice.sph.com/xsd">
+      <xs:import namespace="http://core.mscp.webservice.sph.com/xsd" />
+      <xs:import namespace="http://vo.mscp.webservice.sph.com/xsd" />
+      <xs:import namespace="http://vo.smc.mscp.sph.com/xsd" />
+      <xs:complexType name="ItemInvAdjustOrderUploadReturn">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax219:BaseWebServiceReturn">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="SupplyUploadInvoiceReturn">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax219:BaseWebServiceReturn">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="uploadInvoiceReturnList" nillable="true" type="ax221:SupplyUploadInvoiceItem" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="SupplyUploadDeliveryOrderReturn">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax219:BaseWebServiceReturn">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="deliveryOrderReturnList" nillable="true" type="ax221:SupplyUploadDeliveryOrderReturnItem" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="SettleDownloadReturn">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax219:BaseWebServiceReturn">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="settleDownloadResultList" nillable="true" type="ax224:SettleDownloadResult" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="SupplyOrderReturn">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax219:BaseWebServiceReturn">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="orderList" nillable="true" type="ax221:SupplOrder" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ItemInventoryDownloadReturn">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax219:BaseWebServiceReturn">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="itemInventoryDownloadResultList" nillable="true" type="ax221:ItemInventoryDownloadResult" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ItemInvAdjustAppDownloadReturn">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax219:BaseWebServiceReturn">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="itemInvAdjustAppDownloadResult" nillable="true" type="ax221:ItemInvAdjustAppDownloadResult" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="DeliveryOrderConfirmDownloadReturn">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax219:BaseWebServiceReturn">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="deliveryOrderConfirmSuplList" nillable="true" type="ax221:DeliveryOrderConfirmSupl" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://core.mscp.webservice.sph.com/xsd">
+      <xs:complexType name="BaseWebServiceReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="checkSum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="checkTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="clientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="syn" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="BaseWebServiceReturn">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="clientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="error" type="xs:boolean" />
+          <xs:element minOccurs="0" name="errorCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax216="http://vo.mscp.webservice.sph.com/xsd" xmlns:ax214="http://core.mscp.webservice.sph.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://req.mscp.webservice.sph.com/xsd">
+      <xs:import namespace="http://core.mscp.webservice.sph.com/xsd" />
+      <xs:import namespace="http://vo.mscp.webservice.sph.com/xsd" />
+      <xs:complexType name="ItemInvAdjustOrderReq">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax214:BaseWebServiceReq">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="itemInvAdjustOrder" nillable="true" type="ax216:ItemInvAdjustOrder" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="UploadInvoiceReq">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax214:BaseWebServiceReq">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="invoiceList" nillable="true" type="ax216:SuplInvoice" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="UploadDeliveryOrderReq">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax214:BaseWebServiceReq">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="suplDeliveryOrderList" nillable="true" type="ax216:SuplDeliveryOrder" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://vo.mscp.webservice.sph.com/xsd">
+      <xs:complexType name="ItemInvAdjustOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="adjustApplyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="adjustOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="appItems" nillable="true" type="ax215:ItemInvAdjustOrderSuplItem" />
+          <xs:element minOccurs="0" name="custCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="suplStorageId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ItemInvAdjustOrderSuplItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="adjustReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="adjustType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="inventoryType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="itemSn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="lotNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="newItemSn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="newLotNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="resDetailField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resDetailField2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="supplyItemId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SuplInvoice">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="invoiceAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="invoiceDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="invoiceItems" nillable="true" type="ax215:SuplInvoiceItem" />
+          <xs:element minOccurs="0" name="invoiceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="invoiceType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="redFlg" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="resField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField2" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SuplInvoiceItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="custSettleId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="delyItemLineId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="itemInvoiceQty" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="itemSn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="logisticOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="lotNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resDetailField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resDetailField2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="taxAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="taxFreeAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="taxFreePrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="taxPrice" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SupplyUploadInvoiceItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="errorCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="invoiceNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SuplDeliveryOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="logisticOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="suplDeliveryOrderItems" nillable="true" type="ax215:SuplDeliveryOrderItem" />
+          <xs:element minOccurs="0" name="suplInstorageType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="taxFreeTotalAmt" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="taxTotalAmt" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SuplDeliveryOrderItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="custOrderDetailId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="delyItemLineId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="detailRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="discountRate" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="disinfectionDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="disinfectionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="expireDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="fixedPackageRatio" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="invoiceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="itemSn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="lotNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="makeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="packageBaecode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="packageNum" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="packageUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="platOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="qty" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="resDetailField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resDetailField2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="retailPrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="settleDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="supplyItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="taxAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="taxFreeAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="taxFreePrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="taxPrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="taxRate" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SupplyUploadDeliveryOrderReturnItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="errorCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="logisticOrderID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="platDeliveryOrderID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SupplOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="contactMobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="contactTel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="custBranchCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="custCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="custDepName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="custOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="custStorageName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fixedPackageRatio" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="memo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="orderItems" nillable="true" type="ax215:SupplOrderItem" />
+          <xs:element minOccurs="0" name="orderType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="platOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="postAddrId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="postAddrName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="recerver" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="reqDate" nillable="true" type="xs:date" />
+          <xs:element minOccurs="0" name="resField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="suplStorageId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SupplOrderItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="custOrderDetailId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fixedPackageRatio" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="itemSn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="lotNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="refPrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resDetailField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resDetailField2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="supplyItemId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ItemInventoryDownloadResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="custCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="genWay" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="inventoryType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="inventoryVersion" nillable="true" type="xs:date" />
+          <xs:element minOccurs="0" name="itemSn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="lotNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="onavailableQty" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="onhandQty" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="onlockedQty" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="onreservedQty" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="resField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="suplStorageId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="supplyItemId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ItemInvAdjustAppDownloadResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="adjustApplyDate" nillable="true" type="xs:date" />
+          <xs:element minOccurs="0" name="adjustApplyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="custCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="itemInvAdjustAppSuplItems" nillable="true" type="ax215:ItemInvAdjustAppSuplItem" />
+          <xs:element minOccurs="0" name="resField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="suplStorageId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ItemInvAdjustAppSuplItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="adjustReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="adjustType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="inventoryType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="itemSn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="lotNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="newItemSn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="newLotNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="resDetailField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resDetailField2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="supplyItemId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DeliveryOrderConfirmSupl">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="custDepName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="deliveryOrderConfirmSuplItems" nillable="true" type="ax215:DeliveryOrderConfirmSuplItem" />
+          <xs:element minOccurs="0" name="logisticOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="receiveName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="receiveTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField2" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DeliveryOrderConfirmSuplItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="custOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="delyItemLineId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="inqualityQty" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="platOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="qty" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="resDetailField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resDetailField2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="supplyItemId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://vo.smc.mscp.sph.com/xsd">
+      <xs:complexType name="SettleDownloadResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="custCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="custSettleDate" nillable="true" type="xs:date" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="custSettleDetailItems" nillable="true" type="ax223:CustSettleDetailItem" />
+          <xs:element minOccurs="0" name="custSettleId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="platSettleId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resField2" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CustSettleDetailItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="custOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="platOrderId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resDetailField1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resDetailField2" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="downloadOrders4DelyRequest">
+    <wsdl:part name="parameters" element="ns:downloadOrders4Dely" />
+  </wsdl:message>
+  <wsdl:message name="downloadOrders4DelyResponse">
+    <wsdl:part name="parameters" element="ns:downloadOrders4DelyResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadDeliveryOrderConfirmRequest">
+    <wsdl:part name="parameters" element="ns:downloadDeliveryOrderConfirm" />
+  </wsdl:message>
+  <wsdl:message name="downloadDeliveryOrderConfirmResponse">
+    <wsdl:part name="parameters" element="ns:downloadDeliveryOrderConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadItemInventoryRequest">
+    <wsdl:part name="parameters" element="ns:downloadItemInventory" />
+  </wsdl:message>
+  <wsdl:message name="downloadItemInventoryResponse">
+    <wsdl:part name="parameters" element="ns:downloadItemInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadItemInvAdjustAppRequest">
+    <wsdl:part name="parameters" element="ns:downloadItemInvAdjustApp" />
+  </wsdl:message>
+  <wsdl:message name="downloadItemInvAdjustAppResponse">
+    <wsdl:part name="parameters" element="ns:downloadItemInvAdjustAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadInvoiceRequest">
+    <wsdl:part name="parameters" element="ns:uploadInvoice" />
+  </wsdl:message>
+  <wsdl:message name="uploadInvoiceResponse">
+    <wsdl:part name="parameters" element="ns:uploadInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadDeliveryOrderRequest">
+    <wsdl:part name="parameters" element="ns:uploadDeliveryOrder" />
+  </wsdl:message>
+  <wsdl:message name="uploadDeliveryOrderResponse">
+    <wsdl:part name="parameters" element="ns:uploadDeliveryOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadItemInvAdjustOrderRequest">
+    <wsdl:part name="parameters" element="ns:uploadItemInvAdjustOrder" />
+  </wsdl:message>
+  <wsdl:message name="uploadItemInvAdjustOrderResponse">
+    <wsdl:part name="parameters" element="ns:uploadItemInvAdjustOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadSettleRequest">
+    <wsdl:part name="parameters" element="ns:downloadSettle" />
+  </wsdl:message>
+  <wsdl:message name="downloadSettleResponse">
+    <wsdl:part name="parameters" element="ns:downloadSettleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SupplyServicePortType">
+    <wsdl:operation name="downloadOrders4Dely">
+      <wsdl:input wsaw:Action="urn:downloadOrders4Dely" message="tns:downloadOrders4DelyRequest" />
+      <wsdl:output wsaw:Action="urn:downloadOrders4DelyResponse" message="tns:downloadOrders4DelyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadDeliveryOrderConfirm">
+      <wsdl:input wsaw:Action="urn:downloadDeliveryOrderConfirm" message="tns:downloadDeliveryOrderConfirmRequest" />
+      <wsdl:output wsaw:Action="urn:downloadDeliveryOrderConfirmResponse" message="tns:downloadDeliveryOrderConfirmResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadItemInventory">
+      <wsdl:input wsaw:Action="urn:downloadItemInventory" message="tns:downloadItemInventoryRequest" />
+      <wsdl:output wsaw:Action="urn:downloadItemInventoryResponse" message="tns:downloadItemInventoryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadItemInvAdjustApp">
+      <wsdl:input wsaw:Action="urn:downloadItemInvAdjustApp" message="tns:downloadItemInvAdjustAppRequest" />
+      <wsdl:output wsaw:Action="urn:downloadItemInvAdjustAppResponse" message="tns:downloadItemInvAdjustAppResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadInvoice">
+      <wsdl:input wsaw:Action="urn:uploadInvoice" message="tns:uploadInvoiceRequest" />
+      <wsdl:output wsaw:Action="urn:uploadInvoiceResponse" message="tns:uploadInvoiceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadDeliveryOrder">
+      <wsdl:input wsaw:Action="urn:uploadDeliveryOrder" message="tns:uploadDeliveryOrderRequest" />
+      <wsdl:output wsaw:Action="urn:uploadDeliveryOrderResponse" message="tns:uploadDeliveryOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadItemInvAdjustOrder">
+      <wsdl:input wsaw:Action="urn:uploadItemInvAdjustOrder" message="tns:uploadItemInvAdjustOrderRequest" />
+      <wsdl:output wsaw:Action="urn:uploadItemInvAdjustOrderResponse" message="tns:uploadItemInvAdjustOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadSettle">
+      <wsdl:input wsaw:Action="urn:downloadSettle" message="tns:downloadSettleRequest" />
+      <wsdl:output wsaw:Action="urn:downloadSettleResponse" message="tns:downloadSettleResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SupplyServiceSoap11Binding" type="tns:SupplyServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="downloadOrders4Dely">
+      <soap:operation soapAction="urn:downloadOrders4Dely" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadDeliveryOrderConfirm">
+      <soap:operation soapAction="urn:downloadDeliveryOrderConfirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadItemInventory">
+      <soap:operation soapAction="urn:downloadItemInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadItemInvAdjustApp">
+      <soap:operation soapAction="urn:downloadItemInvAdjustApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadInvoice">
+      <soap:operation soapAction="urn:uploadInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadItemInvAdjustOrder">
+      <soap:operation soapAction="urn:uploadItemInvAdjustOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadDeliveryOrder">
+      <soap:operation soapAction="urn:uploadDeliveryOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadSettle">
+      <soap:operation soapAction="urn:downloadSettle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SupplyServiceSoap12Binding" type="tns:SupplyServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="downloadOrders4Dely">
+      <soap12:operation soapAction="urn:downloadOrders4Dely" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadDeliveryOrderConfirm">
+      <soap12:operation soapAction="urn:downloadDeliveryOrderConfirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadItemInventory">
+      <soap12:operation soapAction="urn:downloadItemInventory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadItemInvAdjustApp">
+      <soap12:operation soapAction="urn:downloadItemInvAdjustApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadInvoice">
+      <soap12:operation soapAction="urn:uploadInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadItemInvAdjustOrder">
+      <soap12:operation soapAction="urn:uploadItemInvAdjustOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadDeliveryOrder">
+      <soap12:operation soapAction="urn:uploadDeliveryOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadSettle">
+      <soap12:operation soapAction="urn:downloadSettle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SupplyServiceHttpBinding" type="tns:SupplyServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="downloadOrders4Dely">
+      <http:operation location="downloadOrders4Dely" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadDeliveryOrderConfirm">
+      <http:operation location="downloadDeliveryOrderConfirm" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadItemInventory">
+      <http:operation location="downloadItemInventory" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadItemInvAdjustApp">
+      <http:operation location="downloadItemInvAdjustApp" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadInvoice">
+      <http:operation location="uploadInvoice" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadItemInvAdjustOrder">
+      <http:operation location="uploadItemInvAdjustOrder" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadDeliveryOrder">
+      <http:operation location="uploadDeliveryOrder" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadSettle">
+      <http:operation location="downloadSettle" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SupplyService">
+    <wsdl:port name="SupplyServiceHttpSoap11Endpoint" binding="tns:SupplyServiceSoap11Binding">
+      <soap:address location="http://www.yychain.com:8085/webservice/services/SupplyService.SupplyServiceHttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="SupplyServiceHttpsSoap11Endpoint" binding="tns:SupplyServiceSoap11Binding">
+      <soap:address location="https://www.yychain.com:8443/webservice/services/SupplyService.SupplyServiceHttpsSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="SupplyServiceHttpSoap12Endpoint" binding="tns:SupplyServiceSoap12Binding">
+      <soap12:address location="http://www.yychain.com:8085/webservice/services/SupplyService.SupplyServiceHttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="SupplyServiceHttpsSoap12Endpoint" binding="tns:SupplyServiceSoap12Binding">
+      <soap12:address location="https://www.yychain.com:8443/webservice/services/SupplyService.SupplyServiceHttpsSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="SupplyServiceHttpsEndpoint" binding="tns:SupplyServiceHttpBinding">
+      <http:address location="https://www.yychain.com:8443/webservice/services/SupplyService.SupplyServiceHttpsEndpoint/" />
+    </wsdl:port>
+    <wsdl:port name="SupplyServiceHttpEndpoint" binding="tns:SupplyServiceHttpBinding">
+      <http:address location="http://www.yychain.com:8085/webservice/services/SupplyService.SupplyServiceHttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

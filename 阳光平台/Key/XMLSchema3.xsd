@@ -1,0 +1,142 @@
+﻿ <SOInfo>
+  <cSOCode>123</cSOCode>
+  <cSTCode>12</cSTCode>
+  <dDate>2013-10-26</dDate>
+  <cDepCode>BSXSSD0001</cDepCode>
+  <cCusCode>001</cCusCode>
+  <cExch_Name>人民币</cExch_Name>
+  <itaxrate>1</itaxrate>
+  <iExchRate>17</iExchRate>
+  <cPersonCode></cPersonCode>
+  <cSCCode></cSCCode >
+  <bReturnFlag>0</bReturnFlag>
+  <cMaker>demo</cMaker>
+  <cmemo>测试用</cmemo>
+  <cDefine1></cDefine1>
+  <cDefine2></cDefine2>
+  <Items>
+    <Item>
+      <cInvCode>cs001</cInvCode>
+      <dPreDate>2013-12-26</dPreDate>
+      <dPreMoDate>2013-12-26</dPreMoDate>
+      <iQuantity>2</iQuantity>
+      <iTaxUnitPrice>1500</iTaxUnitPrice>
+      <iSum>3000</iSum>
+    </Item>
+    <Item>
+      <cInvCode>cs002</cInvCode>
+      <dPreDate>2013-12-26</dPreDate>
+      <dPreMoDate>2013-12-26</dPreMoDate>
+      <iQuantity>3</iQuantity>
+      <iTaxUnitPrice>2000</iTaxUnitPrice>
+      <iSum>6000</iSum>
+    </Item>
+  </Items>
+</SOInfo>
+
+
+<SOInfo>
+  <cSOCode>21988</cSOCode>
+  <cSTCode>13</cSTCode>
+  <dDate>2014-01-01</dDate>
+  <cDepCode>01</cDepCode>
+  <cCusCode>901335</cCusCode>
+  <cExch_Name>人民币</cExch_Name>
+  <itaxrate>17</itaxrate>
+  <iExchRate>1></iExchRate>
+  <cPersonCode></cPersonCode>
+  <cSCCode></cSCCode>
+  <bReturnFlag>0</bReturnFlag>
+  <cMaker>demo</cMaker>
+  <cmemo>配送地址:21325</cmemo>
+  <cDefine1>测试（公租房）</cDefine1>
+  <cDefine2>001-000107-7</cDefine2>
+  <Items>
+    <item>
+      <cInvCode>KB241020800</cInvCode>
+      <dPreDate>2014-01-02</dPreDate>
+      <dPreMoDate>2014-01-02</dPreMoDate>
+      <iQuantity>4</iQuantity>
+      <iQuotedPrice>3350</iQuotedPrice>
+      <iTaxUnitPrice>2300</iTaxUnitPrice>
+      <iSum>9200</iSum>
+    </item>
+  </Items>
+</SOInfo>
+
+
+<SOInfo>
+  <cSOCode>123</cSOCode>
+  <cSTCode>10</cSTCode>
+  <dDate>2013-12-26</dDate>
+  <cDepCode>01</cDepCode>
+  <cCusCode>801001</cCusCode>
+  <cExch_Name>人民币</cExch_Name>
+  <itaxrate>1</itaxrate>
+  <iExchRate>17</iExchRate>
+  <cPersonCode></cPersonCode>
+  <cSCCode></cSCCode >
+  <bReturnFlag>0</bReturnFlag>
+  <cMaker>demo</cMaker>
+  <cmemo>测试用</cmemo>
+  <cDefine1></cDefine1>
+  <cDefine2></cDefine2>
+  <Items>
+    <Item>
+      <cInvCode>1001001</cInvCode>
+      <dPreDate>2013-12-26</dPreDate>
+      <dPreMoDate>2013-12-26</dPreMoDate>
+      <iQuantity>2</iQuantity>
+      <iTaxUnitPrice>1500</iTaxUnitPrice>
+      <iSum>3000</iSum>
+    </Item>
+    <Item>
+      <cInvCode>1001002</cInvCode>
+      <dPreDate>2013-12-26</dPreDate>
+      <dPreMoDate>2013-12-26</dPreMoDate>
+      <iQuantity>3</iQuantity>
+      <iTaxUnitPrice>2000</iTaxUnitPrice>
+      <iSum>6000</iSum>
+    </Item>
+  </Items>
+</SOInfo>
+
+
+<rd>
+  <cCode>1000006411</cCode>
+  <dDate>2014-01-23 17:01:18</dDate>
+  <cExch_Name>人民币</cExch_Name>
+  <cCusCode>SNDA_WX</cCusCode>
+  <cWhCode>02</cWhCode>
+  <cMaker>SNDA_WX</cMaker>
+  <dnmaketime>2014-01-23 13:01:03</dnmaketime>
+  <dlcode>3237420130</dlcode>
+  <dlshipper>ZJS</dlshipper>
+  <dldate>2014-01-23 17:01:18</dldate>
+  <iWeight>0.56</iWeight>
+  <cDefine1>11670970</cDefine1>
+  <bredvouch>0</bredvouch>
+  <cMemo></cMemo>
+  <rds>
+    <productInfo>
+      <cInvCode>CB-B00016-01</cInvCode>
+      <iQuantity>1</iQuantity>
+      <iOriTaxCost>0</iOriTaxCost>
+      <cInvSN>
+        <SN>210061011874</SN>
+      </cInvSN>
+    </productInfo>
+    <productInfo>
+      <cInvCode>PC-B00023-01</cInvCode>
+      <iQuantity>1</iQuantity>
+      <iOriTaxCost>0</iOriTaxCost>
+      <cInvSN></cInvSN>
+    </productInfo>
+    <productInfo>
+      <cInvCode>PR-B00005-01</cInvCode>
+      <iQuantity>1</iQuantity>
+      <iOriTaxCost>0</iOriTaxCost>
+      <cInvSN></cInvSN>
+    </productInfo>
+  </rds>
+</rd>
