@@ -517,7 +517,9 @@ namespace SHYSInterface.退货单
                 {
                     decimal iTaxRate = 17M;
                     string ZXSPBM = rows[i]["ZXSPBM"].ToString();
-                    decimal iQuantity = -(Public.GetNum(rows[i]["THSL"]) * Public.GetNum(rows[i]["BZNHSL"]));//数量
+                    //2016-12-14 TODO:修改数量
+                    //decimal iQuantity = -(Public.GetNum(rows[i]["THSL"]) * Public.GetNum(rows[i]["BZNHSL"]));//数量
+                    decimal iQuantity = -Public.GetNum(rows[i]["THSL"]);//数量
                     decimal iTaxUnitPrice = 0;//原币含税单价
                     //统编代码查找存货编码
                     string cinvcode = ClsSystem.gnvl(SqlAccess.ExecuteScalar("select  cinvcode from inventory_extradefine where cidefine1='"
