@@ -117,7 +117,6 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "退货单代为填报确认";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Visible = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button9

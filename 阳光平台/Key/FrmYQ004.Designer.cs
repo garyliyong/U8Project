@@ -32,7 +32,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBoxQuery = new System.Windows.Forms.CheckBox();
             this.button4 = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -84,7 +83,7 @@
             this.cMemo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cdefine11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sbvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkBoxSingle = new System.Windows.Forms.CheckBox();
+            this.checkBoxQuery = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
@@ -123,7 +122,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBoxSingle);
             this.groupBox1.Controls.Add(this.checkBoxQuery);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.checkBox2);
@@ -143,16 +141,6 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询条件";
-            // 
-            // checkBoxQuery
-            // 
-            this.checkBoxQuery.AutoSize = true;
-            this.checkBoxQuery.Location = new System.Drawing.Point(638, 19);
-            this.checkBoxQuery.Name = "checkBoxQuery";
-            this.checkBoxQuery.Size = new System.Drawing.Size(60, 16);
-            this.checkBoxQuery.TabIndex = 13;
-            this.checkBoxQuery.Text = "按订单";
-            this.checkBoxQuery.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -556,15 +544,15 @@
             this.sbvid.HeaderText = "sbvid";
             this.sbvid.Name = "sbvid";
             // 
-            // checkBoxSingle
+            // checkBoxQuery
             // 
-            this.checkBoxSingle.AutoSize = true;
-            this.checkBoxSingle.Location = new System.Drawing.Point(638, 45);
-            this.checkBoxSingle.Name = "checkBoxSingle";
-            this.checkBoxSingle.Size = new System.Drawing.Size(48, 16);
-            this.checkBoxSingle.TabIndex = 14;
-            this.checkBoxSingle.Text = "单选";
-            this.checkBoxSingle.UseVisualStyleBackColor = true;
+            this.checkBoxQuery.AutoSize = true;
+            this.checkBoxQuery.Location = new System.Drawing.Point(631, 34);
+            this.checkBoxQuery.Name = "checkBoxQuery";
+            this.checkBoxQuery.Size = new System.Drawing.Size(60, 16);
+            this.checkBoxQuery.TabIndex = 13;
+            this.checkBoxQuery.Text = "按订单";
+            this.checkBoxQuery.UseVisualStyleBackColor = true;
             // 
             // FrmYQ004
             // 
@@ -644,7 +632,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cdefine11;
         private System.Windows.Forms.DataGridViewTextBoxColumn sbvid;
         private System.Windows.Forms.CheckBox checkBoxQuery;
-        private System.Windows.Forms.CheckBox checkBoxSingle;
 
     }
 }

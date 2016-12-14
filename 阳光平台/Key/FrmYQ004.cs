@@ -711,7 +711,8 @@ namespace SHYSInterface
                                 sql = sql + " update SaleBillVouchs set cdefine24='" + CLJG + "' where iDLsID=" + iDLsID + "\n";
 
                             }
-                        }  
+                        }
+                        
                     }
                     catch (Exception ex)
                     {
@@ -769,10 +770,7 @@ namespace SHYSInterface
         {
 
          //   int row = e.RowIndex;
-            if (checkBoxSingle.Checked == true)
-            {
-                return;
-            }
+         
             dgv1.EndEdit();
 
 

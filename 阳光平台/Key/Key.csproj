@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{5CB24558-D7C3-4ED6-BEF4-8EF05944D8D5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -399,9 +399,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="退货单\FormReturnOrderFilter.resx">
       <DependentUpon>FormReturnOrderFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="退货单\FormReturnOrderQuery.resx">
       <DependentUpon>FormReturnOrderQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

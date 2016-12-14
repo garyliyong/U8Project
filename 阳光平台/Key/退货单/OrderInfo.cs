@@ -481,7 +481,7 @@ namespace SHYSInterface.退货单
                         ClsSystem.gnvl(rows[0]["PSDBM"], "") + "-" +
                         ClsSystem.gnvl(rows[0]["THDBH"], ""));
                 DataSet ds =  SqlHelper.Query(Program.ConnectionString,"DispatchList", values, keys,null);
-                if (ds.Tables.Count > 0)
+                if (ds.Tables.Count > 0 &ds.Tables[0].Rows.Count > 0)
                 {
                     return;
                 }
@@ -517,7 +517,7 @@ namespace SHYSInterface.退货单
                 {
                     decimal iTaxRate = 17M;
                     string ZXSPBM = rows[i]["ZXSPBM"].ToString();
-                    //2016-12-14 TODO:修改数量
+                    //2016-12-14 TODO: 修改数量
                     //decimal iQuantity = -(Public.GetNum(rows[i]["THSL"]) * Public.GetNum(rows[i]["BZNHSL"]));//数量
                     decimal iQuantity = -Public.GetNum(rows[i]["THSL"]);//数量
                     decimal iTaxUnitPrice = 0;//原币含税单价
@@ -527,13 +527,14 @@ namespace SHYSInterface.退货单
                     string sql = " select isnull(iInvNowCost,0)   from SA_CusUPrice where   cInvCode ='" + cinvcode + "'  and cCusCode  ='" +
                         cCusCode + "' and dStartDate =(select MAX(dStartDate) from SA_CusUPrice where cinvcode='" +
                         cinvcode + "' and  cCusCode ='" + cCusCode + "')";
-                    iTaxUnitPrice = Public.GetNum(ClsSystem.gnvl(SqlAccess.ExecuteScalar(sql, Program.ConnectionString), "0"));
-                    if (iTaxUnitPrice == 0)
-                    {
-                        sql = " select iUPrice1  from SA_InvUPrice where cInvCode ='" + cinvcode +
-                            "' and dStartDate =(select MAX(dStartDate) from SA_InvUPrice where cInvCode ='" + cinvcode + "')";
-                        iTaxUnitPrice = Public.GetNum(ClsSystem.gnvl(SqlAccess.ExecuteScalar(sql, Program.ConnectionString), "0"));
-                    }
+                    iTaxUnitPrice = Public.GetNum(rows[i]["THDJ"]);
+                    //iTaxUnitPrice = Public.GetNum(ClsSystem.gnvl(SqlAccess.ExecuteScalar(sql, Program.ConnectionString), "0"));
+                    //if (iTaxUnitPrice == 0)
+                    //{
+                    //    sql = " select iUPrice1  from SA_InvUPrice where cInvCode ='" + cinvcode +
+                    //        "' and dStartDate =(select MAX(dStartDate) from SA_InvUPrice where cInvCode ='" + cinvcode + "')";
+                    //    iTaxUnitPrice = Public.GetNum(ClsSystem.gnvl(SqlAccess.ExecuteScalar(sql, Program.ConnectionString), "0"));
+                    //}
                     decimal iSum = Public.GetNum(Public.ChinaRound(iTaxUnitPrice * iQuantity, 2));//原币含税金额
                     decimal iUnitPrice = Public.ChinaRound(iTaxUnitPrice / (1M + iTaxRate / 100M), 4);//原币无税单价
                     decimal iMoney = Public.ChinaRound(iSum / (1M + iTaxRate / 100M), 2);//原币无税金额
@@ -555,7 +556,7 @@ namespace SHYSInterface.退货单
                     dispatchLists.cInvName = Getcinvname(cinvcode);
                     dispatchLists.iQuantity = iQuantity.ToString();
                     dispatchLists.iNum = dispatchLists.iSettleQuantity = dispatchLists.iQuantity;
-                    dispatchLists.iQuotedPrice = (decimal.Parse(rows[i]["THDJ"].ToString()) / Public.GetNum(rows[i]["BZNHSL"])).ToString();
+                    dispatchLists.iQuotedPrice = rows[i]["THDJ"].ToString();
                     dispatchLists.iUnitPrice = iUnitPrice.ToString();
                     dispatchLists.iTaxUnitPrice = iTaxUnitPrice.ToString();
                     dispatchLists.iMoney = iMoney.ToString();

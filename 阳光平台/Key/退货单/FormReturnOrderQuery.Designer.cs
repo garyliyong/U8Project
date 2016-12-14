@@ -30,8 +30,6 @@
         {
             this.buttonReturnOrderQuery = new System.Windows.Forms.Button();
             this.dataGridViewReturnOrder = new System.Windows.Forms.DataGridView();
-            this.buttonSelectAll = new System.Windows.Forms.Button();
-            this.buttonImport = new System.Windows.Forms.Button();
             this.SELECTED = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.SFWJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.THDBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +57,8 @@
             this.THDJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.THZJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.THYY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonSelectAll = new System.Windows.Forms.Button();
+            this.buttonImport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReturnOrder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,28 +109,8 @@
             this.dataGridViewReturnOrder.Location = new System.Drawing.Point(3, 47);
             this.dataGridViewReturnOrder.Name = "dataGridViewReturnOrder";
             this.dataGridViewReturnOrder.RowTemplate.Height = 23;
-            this.dataGridViewReturnOrder.Size = new System.Drawing.Size(1032, 423);
+            this.dataGridViewReturnOrder.Size = new System.Drawing.Size(1025, 423);
             this.dataGridViewReturnOrder.TabIndex = 1;
-            // 
-            // buttonSelectAll
-            // 
-            this.buttonSelectAll.Location = new System.Drawing.Point(478, 10);
-            this.buttonSelectAll.Name = "buttonSelectAll";
-            this.buttonSelectAll.Size = new System.Drawing.Size(114, 31);
-            this.buttonSelectAll.TabIndex = 2;
-            this.buttonSelectAll.Text = "全选";
-            this.buttonSelectAll.UseVisualStyleBackColor = true;
-            this.buttonSelectAll.Click += new System.EventHandler(this.buttonSelectAll_Click);
-            // 
-            // buttonImport
-            // 
-            this.buttonImport.Location = new System.Drawing.Point(679, 10);
-            this.buttonImport.Name = "buttonImport";
-            this.buttonImport.Size = new System.Drawing.Size(114, 31);
-            this.buttonImport.TabIndex = 3;
-            this.buttonImport.Text = "导入到U8";
-            this.buttonImport.UseVisualStyleBackColor = true;
-            this.buttonImport.Click += new System.EventHandler(this.buttonImport_Click);
             // 
             // SELECTED
             // 
@@ -295,11 +275,31 @@
             this.THYY.Name = "THYY";
             this.THYY.ReadOnly = true;
             // 
+            // buttonSelectAll
+            // 
+            this.buttonSelectAll.Location = new System.Drawing.Point(478, 10);
+            this.buttonSelectAll.Name = "buttonSelectAll";
+            this.buttonSelectAll.Size = new System.Drawing.Size(114, 31);
+            this.buttonSelectAll.TabIndex = 2;
+            this.buttonSelectAll.Text = "全选";
+            this.buttonSelectAll.UseVisualStyleBackColor = true;
+            this.buttonSelectAll.Click += new System.EventHandler(this.buttonSelectAll_Click);
+            // 
+            // buttonImport
+            // 
+            this.buttonImport.Location = new System.Drawing.Point(679, 10);
+            this.buttonImport.Name = "buttonImport";
+            this.buttonImport.Size = new System.Drawing.Size(114, 31);
+            this.buttonImport.TabIndex = 3;
+            this.buttonImport.Text = "导入到U8";
+            this.buttonImport.UseVisualStyleBackColor = true;
+            this.buttonImport.Click += new System.EventHandler(this.buttonImport_Click);
+            // 
             // FormReturnOrderQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 467);
+            this.ClientSize = new System.Drawing.Size(1028, 467);
             this.Controls.Add(this.buttonImport);
             this.Controls.Add(this.buttonSelectAll);
             this.Controls.Add(this.dataGridViewReturnOrder);
