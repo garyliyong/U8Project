@@ -572,7 +572,7 @@ namespace SHYSInterface.退货单
                     dispatchLists.cDefine30 = ClsSystem.gnvl(rows[i]["CGJLDW"], "");
                     dispatchLists.cDefine32 = ClsSystem.gnvl(rows[i]["PSDBM"], "");
                     dispatchLists.cDefine33 = ClsSystem.gnvl(rows[i]["PSDZ"], "");
-
+                    dispatchLists.cUnitID = ClsSystem.gnvl(SqlAccess.ExecuteScalar("select  cSAComUnitCode    from Inventory a with(nolock)  where cinvcode='" + cinvcode + "'", Program.ConnectionString), ""); //计量单位编码
                     dispatchLists.dMDate = ClsSystem.gnvl(SqlAccess.ExecuteScalar("select  dMDate from CurrentStock where cInvCode='"
                         + cinvcode + "' and cBatch='" + rows[i]["SCPH"].ToString() + "'", Program.ConnectionString), "");
                     //根据CurrentStock表按照批次号查找生产日期和失效日期

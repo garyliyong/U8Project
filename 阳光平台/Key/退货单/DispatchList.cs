@@ -290,6 +290,10 @@ namespace SHYSInterface.退货单
         /// 采购计量单位
         /// </summary>
         public string cDefine30 { get; set; }
+
+        //计量单位编码
+        public string cUnitID { get; set; }
+
         /// <summary>
         /// 医院配送点编码
         /// </summary>
@@ -370,6 +374,7 @@ namespace SHYSInterface.退货单
             values.Add("cExpirationdate", cExpirationdate);
             values.Add("iSettleNum", iSettleNum);
             values.Add("iSettleQuantity", iSettleQuantity);
+            values.Add("cUnitID", cUnitID);
             SqlHelper.Insert(Program.ConnectionString, "DispatchLists", values);
             values.Clear();
             values.Add("iChildId", (OrderInfo.GetBodyID() + 1).ToString());
