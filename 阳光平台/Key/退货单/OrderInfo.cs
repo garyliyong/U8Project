@@ -555,7 +555,8 @@ namespace SHYSInterface.退货单
                     dispatchLists.cInvCode = cinvcode;
                     dispatchLists.cInvName = Getcinvname(cinvcode);
                     dispatchLists.iQuantity = iQuantity.ToString();
-                    dispatchLists.iNum = dispatchLists.iSettleQuantity = dispatchLists.iQuantity;
+                    dispatchLists.iNum = dispatchLists.iQuantity;
+                    dispatchLists.iSettleQuantity = "0";
                     dispatchLists.iQuotedPrice = rows[i]["THDJ"].ToString();
                     dispatchLists.iUnitPrice = iUnitPrice.ToString();
                     dispatchLists.iTaxUnitPrice = iTaxUnitPrice.ToString();

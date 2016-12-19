@@ -331,6 +331,7 @@ namespace SHYSInterface.退货单
         public string iSettleQuantity { get; set; }
 
         public string iSettleNum { get; set; }
+
         /// <summary>
         /// 客户最低售价
         /// </summary>
