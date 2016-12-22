@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaistInterface", "BaistInterface\BaistInterface.csproj", "{6FC84F1E-1098-4D08-AE27-4554E6C288F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseHelper", "..\..\DataBaseHelper\DataBaseHelper\DataBaseHelper.csproj", "{B9CF6D18-25D2-427C-B30A-6E74D221A14B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseHelper", "DataBaseHelper\DataBaseHelper.csproj", "{B9CF6D18-25D2-427C-B30A-6E74D221A14B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginUserControl", "..\..\DataBaseHelper\LoginUserControl\LoginUserControl.csproj", "{B59FBC9B-BB8C-4D57-AA54-EF99DEA6F6EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginUserControl", "LoginUserControl\LoginUserControl.csproj", "{B59FBC9B-BB8C-4D57-AA54-EF99DEA6F6EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

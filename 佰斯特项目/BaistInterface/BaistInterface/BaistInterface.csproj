@@ -107,17 +107,17 @@
     <Compile Include="ViewModel\MainFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\DataBaseHelper\DataBaseHelper\DataBaseHelper.csproj">
+    <Content Include="U8+logo_CS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataBaseHelper\DataBaseHelper.csproj">
       <Project>{B9CF6D18-25D2-427C-B30A-6E74D221A14B}</Project>
       <Name>DataBaseHelper</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\DataBaseHelper\LoginUserControl\LoginUserControl.csproj">
+    <ProjectReference Include="..\LoginUserControl\LoginUserControl.csproj">
       <Project>{B59FBC9B-BB8C-4D57-AA54-EF99DEA6F6EC}</Project>
       <Name>LoginUserControl</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="U8+logo_CS.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
